@@ -1,6 +1,7 @@
 package pfizer.wellness;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -35,6 +36,21 @@ public class BMICalculator extends AppCompatActivity implements View.OnClickList
     @BindView(R.id.tBmiResult)
     TextView mBmiResult;
 
+    @BindView(R.id.tvUnderweight)
+    TextView mUnderweight;
+
+    @BindView(R.id.tvNormal)
+    TextView mNormal;
+
+    @BindView(R.id.tvOverweight)
+    TextView mOverweight;
+
+    @BindView(R.id.tvObese)
+    TextView mObese;
+
+    @BindView(R.id.tvExtremeObeses)
+    TextView mExtremeObeses;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bmi_calculator);
@@ -66,22 +82,47 @@ public class BMICalculator extends AppCompatActivity implements View.OnClickList
                 passResult = Double.parseDouble(rounded);
 
                 if( passResult < 18.5 ){
+//                    mUnderweight.setBackgroundColor(Color.parseColor("#41c2f1"));
+//                    mNormal.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mOverweight.setBackgroundColor(Color.parseColor("#b2b2b2"));
+//                    mObese.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mExtremeObeses.setBackgroundColor(Color.parseColor("#929292"));
                     condition = 1;
                 }
 
                 if( passResult >= 18.5 && passResult <= 24.9 ){
+//                    mUnderweight.setBackgroundColor(Color.parseColor("#929292"));
+//                    mNormal.setBackgroundColor(Color.parseColor("#41c2f1"));
+//                    mOverweight.setBackgroundColor(Color.parseColor("#b2b2b2"));
+//                    mObese.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mExtremeObeses.setBackgroundColor(Color.parseColor("#929292"));
                     condition = 2;
                 }
 
                 if( passResult > 24.9 && passResult <= 29.9  ){
+//                    mUnderweight.setBackgroundColor(Color.parseColor("#929292"));
+//                    mNormal.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mOverweight.setBackgroundColor(Color.parseColor("#41c2f1"));
+//                    mObese.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mExtremeObeses.setBackgroundColor(Color.parseColor("#929292"));
                     condition = 3;
                 }
 
                 if( passResult > 29.9 && passResult <= 34.9 ){
+//                    mUnderweight.setBackgroundColor(Color.parseColor("#929292"));
+//                    mNormal.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mOverweight.setBackgroundColor(Color.parseColor("#b2b2b2"));
+//                    mObese.setBackgroundColor(Color.parseColor("#41c2f1"));
+//                    mExtremeObeses.setBackgroundColor(Color.parseColor("#929292"));
                     condition = 4;
                 }
 
                 if( passResult >= 40 ){
+//                    mUnderweight.setBackgroundColor(Color.parseColor("#929292"));
+//                    mNormal.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mOverweight.setBackgroundColor(Color.parseColor("#b2b2b2"));
+//                    mObese.setBackgroundColor(Color.parseColor("#9d9d9d"));
+//                    mExtremeObeses.setBackgroundColor(Color.parseColor("#41c2f1"));
                     condition = 5;
                 }
 
