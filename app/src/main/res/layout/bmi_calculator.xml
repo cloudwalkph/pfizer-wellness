@@ -40,7 +40,6 @@
         android:orientation="vertical"
         android:layout_weight="1"
         android:background="#ffffff"
-        android:alpha="0.6"
         android:padding="10dp">
 
         <LinearLayout
@@ -120,7 +119,7 @@
                         android:textSize="9dp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:background="#9d9d9d"
+                        android:background="#41c2f1"
                         android:text="@string/normal" />
 
                     <TextView
