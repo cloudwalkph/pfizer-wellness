@@ -40,7 +40,7 @@
                     android:textColor="#0773ba" />
 
                 <EditText
-                    android:id="@+id/textPersonName"
+                    android:id="@+id/textCustomerName"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:ems="10"
@@ -59,17 +59,18 @@
                     android:textAlignment="center"
                     android:textColor="#0773ba" />
 
-                <RadioGroup
-                    android:id="@+id/radioGender"
-                    android:paddingTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
                         android:orientation="horizontal"
                         android:layout_gravity="center">
+
+                        <RadioGroup
+                            android:id="@+id/radioGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radioMale"
@@ -89,9 +90,9 @@
                                 android:buttonTint="#c3c3c5"
                                 android:text="@string/radio_female" />
 
-                    </LinearLayout>
 
-                </RadioGroup>
+                        </RadioGroup>
+                    </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -179,13 +180,22 @@
     android:gravity="center|bottom"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btn_submit"
-        android:background="@drawable/buttonbg"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal|center"
-        android:text="SUBMIT >" />
+        <Button
+            android:id="@+id/btn_export"
+            android:background="@drawable/buttonbg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|center"
+            android:text="@string/export"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:background="@drawable/buttonbg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|center"
+            android:text="SUBMIT >"/>
 
     </LinearLayout>
 </LinearLayout>
